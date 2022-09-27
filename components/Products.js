@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         flex: 1,
         borderRadius: 15,
-        paddingLeft:25
+        paddingLeft:17
     },
     boxes: {
         width: 150,

@@ -1,19 +1,18 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {StyleSheet , TouchableOpacity} from 'react-native';
-import {Image, Center, Button} from 'native-base';
+import {StyleSheet , TouchableOpacity , Image ,View} from 'react-native';
 import {Text} from 'react-native-paper';
 
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
   return (
-    <Center style={styles.container}>
+    <View style={styles.container}>
       <Image
-        size={150}
         borderRadius={100}
         source={{
           uri: 'https://www.w3schools.com/css/img_lights.jpg',
         }}
+       style={{height:150,width:150}}
         alt="Alternate Text"
       />
       <Text style={styles.stretch} variant="titleLarge">
@@ -22,20 +21,24 @@ const Welcome = () => {
       <Text style={styles.paragraph}>you may also buys and purchase only</Text>
 
       <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.logintxt} >LOGIN</Text>
+        <Text style={styles.logintxt} onPress={() => navigation.navigate('Login')} >LOGIN</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.registerBtn}>
-        <Text style={styles.registertxt}>SIGNUP</Text> 
+        <Text style={styles.registertxt} onPress={() => navigation.navigate('Register')} >SIGNUP</Text> 
       </TouchableOpacity>
       
       
-    </Center>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     paddingTop: 50,
+    flex:1,
+    flexDirection:'column',
+    alignItems:'center'
+
   },
   stretch: {
     paddingTop: 100,

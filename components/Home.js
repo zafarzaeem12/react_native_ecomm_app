@@ -115,6 +115,8 @@ const Home = () => {
           )}
         />
         {/* Product flatlist end here */}
+        
+            
 
         {/* New Arrival flatlist start here */}
         <FlatList

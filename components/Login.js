@@ -1,21 +1,18 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { StyleSheet, TouchableOpacity, TextInput, View } from 'react-native';
-import { Image, Center } from 'native-base';
 import { Text, Appbar } from 'react-native-paper';
 
-const Login = () => {
+const Login = ({navigation}) => {
   return (
     <>
-      <Appbar.Header style={{backgroundColor:"#ffffff"}}>
-          <Appbar.BackAction onPress={() => {}} />
-      </Appbar.Header>
+
       <View style={styles.stretch}  >
         <Text style={styles.text} variant="titleSmall">
           Sign In
         </Text>
       </View>
-      <Center style={styles.container}>
+      <View style={styles.container}>
 
         <View style={{ padding: 10 }}>
           <TextInput style={styles.textInput} placeholder={"Enter Email Or Password"} />
@@ -27,7 +24,7 @@ const Login = () => {
 
 
         <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.logintxt} >LOGIN</Text>
+          <Text style={styles.logintxt} onPress={() => navigation.navigate('Home')}  >LOGIN</Text>
         </TouchableOpacity>
 
         <View>
@@ -38,7 +35,7 @@ const Login = () => {
           <Text style={styles.logintxt} >Facebook Login</Text>
         </TouchableOpacity>
 
-      </Center>
+      </View>
 
     </>
   )
@@ -47,6 +44,9 @@ const Login = () => {
 const styles = StyleSheet.create({
   container: {
     paddingTop: 50,
+    flex:1,
+    flexDirection:'column',
+    alignItems:'center'
   },
   text: {
     paddingTop: 40,

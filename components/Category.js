@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   categorytext: {
     fontWeight: 'bold' ,
-     color:'white',
+     color:'black',
     paddingTop:28
     }
 

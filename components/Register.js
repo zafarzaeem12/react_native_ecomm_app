@@ -1,21 +1,19 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { StyleSheet, TouchableOpacity, TextInput, View } from 'react-native';
-import { Image, Center } from 'native-base';
+
 import { Text, Appbar } from 'react-native-paper';
 
 const Register = () => {
     return (
         <>
-            <Appbar.Header style={{ backgroundColor: "#ffffff" }}>
-                <Appbar.BackAction onPress={() => { }} />
-            </Appbar.Header>
+         
             <View style={styles.stretch}  >
                 <Text style={styles.text} variant="titleSmall">
                     Create new account
                 </Text>
             </View>
-            <Center style={styles.container}>
+            <View style={styles.container}>
 
                 <View style={{ padding: 10 }}>
                     <TextInput style={styles.textInput} placeholder={"Enter Name"} />
@@ -37,7 +35,7 @@ const Register = () => {
                 </TouchableOpacity>
 
 
-            </Center>
+            </View>
 
         </>
     )
@@ -46,6 +44,9 @@ const Register = () => {
 const styles = StyleSheet.create({
     container: {
         paddingTop: 50,
+        flex:1,
+        flexDirection:'column',
+        alignItems:'center'
     },
     text: {
         paddingTop: 40,
