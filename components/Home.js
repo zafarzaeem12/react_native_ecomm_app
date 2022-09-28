@@ -10,6 +10,9 @@ import Category from './Category';
 import NewArrival from './NewArrival';
 import IsFeatured from './IsFeatured';
 import Products from './Products';
+import ProductFlatlist from './ProductFlatlist';
+import ArrivalListFlatlist from './ArrivalListFlatlist';
+import FeaturedFlatlist from './FeaturedFlatlist';
 const Home = () => {
  
 
@@ -62,20 +65,20 @@ const Home = () => {
     },
     {
       id: '8',
-      title: 'Dresses',
+      title: 'Kids',
       img: 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg',
       isFeatured: false
     },
     {
       id: '9',
-      title: 'Dresses',
+      title: 'Male',
       img: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
       newarrival: "new",
       isFeatured: false
     },
     {
       id: '10',
-      title: 'Dresses',
+      title: 'Female',
       img: 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg',
       isFeatured: false
     },
@@ -110,14 +113,16 @@ const Home = () => {
           keyExtractor={(item) => item.id}
           numColumns={2}
           data={DATA}
+          ListHeaderComponent={ProductFlatlist}
           renderItem={({ item }) => (
             <Products item={item} />
           )}
         />
         {/* Product flatlist end here */}
         
+   
             
-
+       {ArrivalListFlatlist()}
         {/* New Arrival flatlist start here */}
         <FlatList
           keyExtractor={(item) => item?.id}
@@ -150,6 +155,8 @@ const Home = () => {
           )}
         />
         {/* Product flatlist end here */}
+
+        {FeaturedFlatlist()}
 
         {/* isFeatured flatlist start here */}
         <FlatList

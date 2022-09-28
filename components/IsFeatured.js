@@ -28,7 +28,7 @@ export default IsFeatured
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        padding: 40,
         flexDirection: 'row',
         flexWrap: 'wrap',
         flex: 1,
