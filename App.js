@@ -13,7 +13,7 @@ import UserNavigator from './components/Navigator/UserNavigator';
 const App = () => {
   const [selected, setSelected] = useState(1);
  
-  const [user,Setuser] = useState(false);
+  const [user,Setuser] = useState(true);
   
   useEffect(() => {
       Setuser(user)
