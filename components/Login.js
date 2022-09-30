@@ -1,41 +1,46 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { StyleSheet, TouchableOpacity, TextInput, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, TextInput, View ,ScrollView } from 'react-native';
 import { Text, Appbar } from 'react-native-paper';
 
 const Login = ({navigation}) => {
   return (
     <>
+      <ScrollView style={styles.container}  contentContainerStyle={{ alignItems:'center' }} >
+          <View style={styles.stretch}  >
+            <Text style={styles.text} variant="titleSmall">
+              Sign In
+            </Text>
+          </View>
+          <View style={styles.container}>
 
-      <View style={styles.stretch}  >
-        <Text style={styles.text} variant="titleSmall">
-          Sign In
-        </Text>
-      </View>
-      <View style={styles.container}>
-
-        <View style={{ padding: 10 }}>
-          <TextInput style={styles.textInput} placeholder={"Enter Email Or Password"} />
-        </View>
-        <View style={{ padding: 10 }}>
-          <TextInput style={styles.textInput} placeholder={"Enter Password"} />
-        </View>
+            <View style={{ padding: 10 }}>
+              <TextInput style={styles.textInput} placeholder={"Enter Email Or Password"} />
+            </View>
+            <View style={{ padding: 10 }}>
+              <TextInput style={styles.textInput} placeholder={"Enter Password"} />
+            </View>
 
 
+            <View style={{alignItems:"center"}}> 
+              <TouchableOpacity style={styles.loginBtn}>
+                <Text style={styles.logintxt} onPress={() => navigation.navigate('Home')}  >LOGIN</Text>
+              </TouchableOpacity>
+              <Text style={{padding:10}} onPress={() => navigation.navigate("Register")}>Donot have a account Register User</Text>
+            </View>
 
-        <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.logintxt} onPress={() => navigation.navigate('Home')}  >LOGIN</Text>
-        </TouchableOpacity>
+            <View>
+              <Text style={styles.text}> OR </Text>
+            </View>
 
-        <View>
-          <Text style={styles.text}> OR </Text>
-        </View>
+            <View style={{alignItems:"center"}}>
+              <TouchableOpacity style={styles.facebookBtn}>
+                <Text style={styles.logintxt} >Facebook Login</Text>
+              </TouchableOpacity>
+            </View>
 
-        <TouchableOpacity style={styles.facebookBtn}>
-          <Text style={styles.logintxt} >Facebook Login</Text>
-        </TouchableOpacity>
-
-      </View>
+          </View>
+      </ScrollView>
 
     </>
   )
@@ -43,16 +48,17 @@ const Login = ({navigation}) => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 50,
+    paddingTop: 100,
     flex:1,
     flexDirection:'column',
-    alignItems:'center'
+    backgroundColor:"#FF7616"
   },
   text: {
     paddingTop: 40,
     fontSize: 30,
     flexDirection: 'row',
-    justifyContent: 'flex-end'
+    justifyContent: 'center',
+    textAlign:"center"
   },
   stretch: {
     paddingLeft: 20,
@@ -62,9 +68,10 @@ const styles = StyleSheet.create({
     paddingTop: 35,
   },
   loginBtn: {
-    width: "80%",
+    textAlign:"center",
+    height: 45,
+    width: 330,
     borderRadius: 25,
-    height: 50,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 40,
@@ -74,9 +81,9 @@ const styles = StyleSheet.create({
 
   },
   facebookBtn: {
-    width: "80%",
+    height: 45,
+        width: 330,
     borderRadius: 25,
-    height: 50,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 40,
@@ -108,7 +115,7 @@ const styles = StyleSheet.create({
     height: 45,
     width: 330,
     borderRadius: 100,
-    borderColor: "black",
+    borderColor: "white",
     paddingBottom: 10,
     paddingLeft: 15,
     borderWidth: 2

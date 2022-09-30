@@ -13,7 +13,7 @@ import Products from './Products';
 import ProductFlatlist from './ProductFlatlist';
 import ArrivalListFlatlist from './ArrivalListFlatlist';
 import FeaturedFlatlist from './FeaturedFlatlist';
-const Home = () => {
+const Home = ({navigation}) => {
  
 
   const DATA = [
@@ -92,7 +92,7 @@ const Home = () => {
         <NavBar
           transparent
           title="Alibaba.com"
-          left={<Icon name="hamburger" size={30} color="grey" />}
+          left={<Icon name="hamburger" size={30} color="grey" onPress={() => navigation.toggleDrawer()} />}
           right={<Ic name="shopping-bag" size={40} color="silver" />}
         />
         {/* Categories flatlist start here */}
@@ -214,6 +214,7 @@ const styles = StyleSheet.create({
   },
   container: {
     paddingTop: 50,
+    backgroundColor:"#A0CAFF"
   },
   text: {
     paddingTop: 40,

@@ -1,34 +1,35 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {StyleSheet , TouchableOpacity , Image ,View} from 'react-native';
+import {StyleSheet , TouchableOpacity , Image ,View ,ScrollView ,ImageBackground} from 'react-native';
 import {Text} from 'react-native-paper';
 
 
-const Welcome = ({navigation}) => {
+const   Welcome = ({navigation}) => {
   return (
-    <View style={styles.container}>
-      <Image
-        borderRadius={100}
-        source={{
-          uri: 'https://www.w3schools.com/css/img_lights.jpg',
-        }}
-       style={{height:150,width:150}}
-        alt="Alternate Text"
-      />
-      <Text style={styles.stretch} variant="titleLarge">
-        Welcome to AliBaba.com
-      </Text>
-      <Text style={styles.paragraph}>you may also buys and purchase only</Text>
+    <ScrollView style={styles.container} contentContainerStyle={{ alignItems:'center' }} >
+        <Image
+          borderRadius={100}
+          source={{
+            uri: 'https://sp-ao.shortpixel.ai/client/q_glossy,ret_img/https://jingdaily.com/wp-content/uploads/2021/03/alibaba-monopoly-bust-1240x697.jpg',
+          }}
+        style={{height:150,width:150}}
+          alt="Alternate Text"
+        />
+        <Text style={styles.stretch} variant="titleLarge">
+          Welcome to AliBaba.com
+        </Text>
+        <Text style={styles.paragraph}>you may also buys and purchase only</Text>
 
-      <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.logintxt} onPress={() => navigation.navigate('Login')} >LOGIN</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.registerBtn}>
-        <Text style={styles.registertxt} onPress={() => navigation.navigate('Register')} >SIGNUP</Text> 
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.loginBtn}>
+          <Text style={styles.logintxt} onPress={() => navigation.navigate('Login')} >LOGIN</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.registerBtn}>
+          <Text style={styles.registertxt} onPress={() => navigation.navigate('Register')} >SIGNUP</Text> 
+        </TouchableOpacity>
+    
       
       
-    </View>
+    </ScrollView>
   );
 };
 
@@ -37,8 +38,7 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     flex:1,
     flexDirection:'column',
-    alignItems:'center'
-
+   backgroundColor:"#FF7616"
   },
   stretch: {
     paddingTop: 100,
@@ -55,8 +55,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 40,
     backgroundColor: "black",
-    borderWidth:2,
-    borderColor:"black"
 
   },
   registerBtn: {
@@ -67,8 +65,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 40,
     backgroundColor: "white",
-    borderWidth:2,
-    borderColor:"black"
+    
   },
   logintxt:{
     color:"white",

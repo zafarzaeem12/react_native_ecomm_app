@@ -1,25 +1,35 @@
 /* eslint-disable prettier/prettier */
-import 'react-native-gesture-handler';
-import React, { useState } from 'react';
+
+import React, { useState , useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Welcome from './components/Welcome';
-import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
+import AuthNavigator from './components/Navigator/AuthNavigator';
+import UserNavigator from './components/Navigator/UserNavigator';
+
+
+
+
+
+
 const App = () => {
   const [selected, setSelected] = useState(1);
-  const Stack = createNativeStackNavigator();
+ 
+  const [user,Setuser] = useState(false);
+  
+  useEffect(() => {
+      Setuser(user)
+  },[])
+
 
   return (
 
     <NavigationContainer>
-      <Stack.Navigator >
-        <Stack.Screen name='Welcome' component={Welcome} />
-        <Stack.Screen name='Login' component={Login} />
-        <Stack.Screen name='Register' component={Register} />
-        <Stack.Screen name='Home' component={Home} options={{ headerShown: false }} />
-      </Stack.Navigator>
+    {
+      user
+      ?
+      <UserNavigator />
+      :
+      <AuthNavigator />
+    }
     </NavigationContainer>
 
   );
