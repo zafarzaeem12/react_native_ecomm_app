@@ -15,6 +15,10 @@ const App = () => {
  
   const [user,Setuser] = useState(true);
   
+  const data = {
+    name: "Tariq masood",
+    avatar:"https://yt3.ggpht.com/ytc/AMLnZu8dj7pRtdre1hUe4zVPLd8PAvI4fVe__jHZMkgBXg=s900-c-k-c0x00ffffff-no-rj"
+  }  
   useEffect(() => {
       Setuser(user)
   },[])
@@ -24,9 +28,9 @@ const App = () => {
 
     <NavigationContainer>
     {
-      user
+      user 
       ?
-      <UserNavigator />
+      <UserNavigator data={data} />
       :
       <AuthNavigator />
     }

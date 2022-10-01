@@ -13,76 +13,10 @@ import Products from './Products';
 import ProductFlatlist from './ProductFlatlist';
 import ArrivalListFlatlist from './ArrivalListFlatlist';
 import FeaturedFlatlist from './FeaturedFlatlist';
-const Home = ({navigation}) => {
+const Home = (props) => {
  
-
-  const DATA = [
-    {
-      id: '1',
-      title: 'Clothings',
-      img: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
-      newarrival: "new",
-      isFeatured: true
-    },
-    {
-      id: '2',
-      title: 'Accessoies',
-      img: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
-      isFeatured: true
-    },
-    {
-      id: '3',
-      title: 'Skin',
-      img: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
-      newarrival: "new",
-      isFeatured: true
-    },
-    {
-      id: '4',
-      title: 'Watches',
-      img: 'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg',
-      isFeatured: true
-    },
-    {
-      id: '5',
-      title: 'Bags',
-      img: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
-      newarrival: "new",
-      isFeatured: true
-    },
-    {
-      id: '6',
-      title: 'Dresses',
-      img: 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg',
-      isFeatured: false
-    },
-    {
-      id: '7',
-      title: 'Bags',
-      img: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
-      newarrival: "new",
-      isFeatured: false
-    },
-    {
-      id: '8',
-      title: 'Kids',
-      img: 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg',
-      isFeatured: false
-    },
-    {
-      id: '9',
-      title: 'Male',
-      img: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
-      newarrival: "new",
-      isFeatured: false
-    },
-    {
-      id: '10',
-      title: 'Female',
-      img: 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg',
-      isFeatured: false
-    },
-  ];
+const {navigation ,route   } = props
+ console.log("zaeem",route.params.DATA)
 
 
 
@@ -98,7 +32,7 @@ const Home = ({navigation}) => {
         {/* Categories flatlist start here */}
         <FlatList
           keyExtractor={(item) => item?.id}
-          data={DATA}
+          data={route.params.DATA}
           horizontal
           renderItem={
             ({ item }) => (
@@ -112,7 +46,7 @@ const Home = ({navigation}) => {
         <FlatList
           keyExtractor={(item) => item.id}
           numColumns={2}
-          data={DATA}
+          data={route.params.DATA}
           ListHeaderComponent={ProductFlatlist}
           renderItem={({ item }) => (
             <Products item={item} />
@@ -126,7 +60,7 @@ const Home = ({navigation}) => {
         {/* New Arrival flatlist start here */}
         <FlatList
           keyExtractor={(item) => item?.id}
-          data={DATA}
+          data={route.params.DATA}
           horizontal
           renderItem={
             ({ item }) => {
@@ -149,7 +83,7 @@ const Home = ({navigation}) => {
         <FlatList
           keyExtractor={(item) => item.id}
           numColumns={2}
-          data={DATA}
+          data={route.params.DATA}
           renderItem={({ item }) => (
             <Products item={item} />
           )}
@@ -161,7 +95,7 @@ const Home = ({navigation}) => {
         {/* isFeatured flatlist start here */}
         <FlatList
           keyExtractor={(item) => item.id}
-          data={DATA}
+          data={route.params.DATA}
           horizontal
           renderItem={({ item }) => {
             if (item.isFeatured) {
@@ -183,7 +117,7 @@ const Home = ({navigation}) => {
         <FlatList
           keyExtractor={(item) => item.id}
           numColumns={2}
-          data={DATA}
+          data={route.params.DATA}
           renderItem={({ item }) => (
             <Products item={item} />
           )}
