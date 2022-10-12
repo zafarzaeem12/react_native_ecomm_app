@@ -18,11 +18,11 @@ const Search = (props) => {
                 left={
                     <>
                         <Icon name="hamburger" size={30} color="grey" onPress={() => navigation.toggleDrawer()} />
-                        <Input type='text' rounded borderless placeholder='Search' />
+                        <Input type='text' style={styles.searchinput} rounded borderless placeholder='Search' />
                     </>
 
                 }
-                leftStyle={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}
+                leftStyle={styles.leftside}
                 right={<Ic name="shopping-bag" size={40} color="silver" />}
                 rightStyle={{ alignItems: "flex-end" }}
             />
@@ -47,6 +47,12 @@ const styles = StyleSheet.create({
     ontake: {
         display: "flex",
         flexDirection: "row"
+    },
+    searchinput:{
+        width:270
+    },
+    leftside:{
+        display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" ,flex:3
     }
 })
 

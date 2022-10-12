@@ -96,7 +96,7 @@ const UserNavigator = ({navigation ,data}) => {
             drawerStyle: {
                 backgroundColor: '#FF7616',
                 paddingTop:50,
-                width: 240,
+                width: 240
             }
             }}
             >
