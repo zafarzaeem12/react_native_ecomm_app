@@ -25,65 +25,75 @@ const UserNavigator = ({navigation ,data}) => {
           title: 'Clothings',
           img: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
           newarrival: "new",
-          isFeatured: true
+          isFeatured: true,
+          Price:200
         },
         {
           id: '2',
           title: 'Accessoies',
           img: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
-          isFeatured: true
+          isFeatured: true,
+          Price:201
         },
         {
           id: '3',
           title: 'Skin',
           img: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
           newarrival: "new",
-          isFeatured: true
+          isFeatured: true,
+          Price:209
         },
         {
           id: '4',
           title: 'Watches',
           img: 'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg',
-          isFeatured: true
+          isFeatured: true,
+          Price:198
         },
         {
           id: '5',
           title: 'Bags',
           img: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
           newarrival: "new",
-          isFeatured: true
+          isFeatured: true,
+          Price:227
         },
         {
           id: '6',
           title: 'Dresses',
           img: 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg',
-          isFeatured: false
+          isFeatured: false,
+          Price:208
         },
         {
           id: '7',
           title: 'Bags',
           img: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
           newarrival: "new",
-          isFeatured: false
+          isFeatured: false,
+          Price:100
         },
         {
           id: '8',
           title: 'Kids',
           img: 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg',
-          isFeatured: false
+          isFeatured: false,
+          Price:108
         },
         {
           id: '9',
           title: 'Male',
           img: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
           newarrival: "new",
-          isFeatured: false
+          isFeatured: false,
+          Price:98
         },
         {
           id: '10',
           title: 'Female',
           img: 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg',
-          isFeatured: false
+          isFeatured: false,
+          Price:298
         },
       ];
     
